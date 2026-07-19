@@ -6,62 +6,76 @@ const ProjectDetail = ({ projectId, setPage }) => {
 
   if (!project) {
     return (
-      <div className="text-white text-center py-10">Project not found.</div>
+      <div className="py-10 text-center text-white">Project not found.</div>
     );
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <button
         onClick={() => setPage({ name: "projects" })}
-        className="flex items-center mb-8 text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+        className="mb-8 flex items-center gap-2 text-indigo-400 transition-colors hover:text-indigo-300"
       >
         <ArrowLeftIcon />
         Back to Projects
       </button>
-      <div className="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
+
+      <div className="overflow-hidden rounded-xl bg-gray-800 shadow-xl">
         <img
           src={project.imageUrl}
           alt={project.title}
-          className="w-full h-64 object-cover"
+          loading="lazy"
+          className="h-72 w-full object-cover"
         />
-        <div className="p-8">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            {project.title}
-          </h2>
-          <p className="text-gray-300 mb-6">{project.longDescription}</p>
 
-          <h4 className="text-lg font-semibold text-white mb-3">
-            Technologies Used:
-          </h4>
-          <div className="flex flex-wrap gap-2 mb-8">
+        <div className="p-8">
+          <h1 className="mb-4 text-3xl font-bold text-white">
+            {project.title}
+          </h1>
+
+          <p className="mb-8 leading-7 text-gray-300">
+            {project.longDescription}
+          </p>
+
+          <h3 className="mb-3 text-lg font-semibold text-white">
+            Technologies Used
+          </h3>
+
+          <div className="mb-8 flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="bg-gray-700 text-indigo-300 text-xs font-semibold px-2.5 py-1 rounded-full"
+                className="rounded-full bg-gray-700 px-3 py-1 text-sm text-indigo-300"
               >
                 {tech}
               </span>
             ))}
           </div>
 
-          <div className="flex gap-4">
-            <a
-              href={project.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-all duration-300"
-            >
-              Live Demo <ExternalLinkIcon />
-            </a>
-            <a
-              href={project.repoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gray-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-500 transition-all duration-300"
-            >
-              GitHub Repo <GithubIcon />
-            </a>
+          <div className="flex flex-wrap gap-4">
+            {project.liveLink && project.liveLink !== "#" && (
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-700"
+              >
+                Live Demo
+                <ExternalLinkIcon />
+              </a>
+            )}
+
+            {project.repoLink && project.repoLink !== "#" && (
+              <a
+                href={project.repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-gray-700 px-5 py-3 font-semibold text-white transition hover:bg-gray-600"
+              >
+                GitHub
+                <GithubIcon />
+              </a>
+            )}
           </div>
         </div>
       </div>

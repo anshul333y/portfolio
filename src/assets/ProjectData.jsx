@@ -1,38 +1,44 @@
 export const projectsData = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Full-Stack Blogging Platform",
     description:
-      "A full-featured e-commerce website with product listings, a shopping cart, and a checkout process. Built with the MERN stack.",
+      "A modern blogging platform with authentication, blog publishing, and a responsive interface.",
     longDescription:
-      "This project was a deep dive into full-stack development, creating a scalable and robust online store. It includes user authentication, order management for admins, and a responsive design that works seamlessly across all devices. The backend is powered by Node.js and Express, with MongoDB for the database.",
-    imageUrl: "https://placehold.co/600x400/1a202c/718096?text=E-commerce",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    liveLink: "#",
-    repoLink: "#",
+      "Built a full-stack blogging application where users can sign up, sign in, create, edit, and publish blogs. The backend is powered by Hono running on Cloudflare Workers with PostgreSQL and Prisma ORM. JWT authentication secures protected routes, while shared Zod schemas provide end-to-end type-safe validation. The frontend is built using React, TypeScript, Vite, and Tailwind CSS for a fast and responsive user experience.",
+    imageUrl: "/public/blog.png",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Hono",
+      "Cloudflare Workers",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Zod",
+      "JWT",
+    ],
+    liveLink: "https://blog.anshul333y.me",
+    repoLink: "https://github.com/anshul333y/blog-app",
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "Weather Forecast App",
     description:
-      "A sleek and intuitive task manager to help users organize their daily to-dos. Features drag-and-drop functionality.",
+      "A responsive weather application that displays real-time weather conditions and forecasts.",
     longDescription:
-      "This application helps users stay productive by providing a clean interface to manage their tasks. Key features include creating task boards, adding tasks with deadlines, and moving tasks between columns (e.g., To Do, In Progress, Done) using a smooth drag-and-drop interface. State is managed using React Context for a lightweight solution.",
-    imageUrl: "https://placehold.co/600x400/1a202c/718096?text=Task+App",
-    technologies: ["React", "React Context", "Framer Motion", "Tailwind CSS"],
-    liveLink: "#",
-    repoLink: "#",
-  },
-  {
-    id: 3,
-    title: "Personal Blog",
-    description:
-      "A dynamic personal blog built with a headless CMS for easy content management and a fast front-end.",
-    longDescription:
-      "This project focuses on content delivery and performance. It uses a headless CMS (like Strapi or Contentful) to manage blog posts, which are then fetched and rendered by a Next.js front-end. This separation allows for excellent SEO, fast page loads, and an easy writing experience.",
-    imageUrl: "https://placehold.co/600x400/1a202c/718096?text=Blog",
-    technologies: ["Next.js", "Headless CMS", "GraphQL", "Styled Components"],
-    liveLink: "#",
-    repoLink: "#",
+      "Developed a weather application that fetches live weather data from a public API and presents current conditions, hourly forecasts, and multi-day forecasts in a clean and intuitive interface. Features include city search, dynamic weather icons, temperature conversion, loading states, and responsive design optimized for desktop and mobile devices.",
+    imageUrl: "/public/weather.png",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Weather API",
+      "Axios",
+    ],
+    liveLink: "https://weather.anshul333y.me",
+    repoLink: "https://github.com/anshul333y/weather-app",
   },
 ];

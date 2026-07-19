@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Project";
 import ProjectDetail from "./pages/ProjectDetail";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
 
 export default function App() {
   const [page, setPage] = useState({ name: "home", id: null });
