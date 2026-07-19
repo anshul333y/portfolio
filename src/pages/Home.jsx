@@ -1,4 +1,4 @@
-import profile from "/public/profile.png";
+import profile from "/src/assets/profile.png";
 
 export default function Home({ setPage }) {
   return (
