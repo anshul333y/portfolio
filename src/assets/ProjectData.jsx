@@ -1,5 +1,6 @@
 import blogImage from "./blog.png";
 import weatherImage from "./weather.png";
+import arch from "./arch.png";
 
 export const projectsData = [
   {
@@ -43,5 +44,27 @@ export const projectsData = [
     ],
     liveLink: "https://weather.anshul333y.me",
     repoLink: "https://github.com/anshul333y/weather-app",
+  },
+  {
+    id: 3,
+    title: "Arch Linux + Hyprland",
+    description:
+      "A highly customized Arch Linux desktop environment built around Hyprland with a focus on minimalism, performance, and keyboard-driven workflows.",
+    longDescription:
+      "Built and maintained a personalized Arch Linux environment using Hyprland as the Wayland compositor. The setup includes customized window management, Waybar, terminal and shell configurations, Neovim, tmux, wallpapers, keybindings, and user scripts mapped to ~/.local/bin. The configuration is organized as a dotfiles repository to make the entire desktop environment reproducible and easy to deploy on a fresh Arch Linux installation.",
+    imageUrl: arch,
+    technologies: [
+      "Arch Linux",
+      "Hyprland",
+      "Wayland",
+      "Waybar",
+      "Kitty",
+      "Neovim",
+      "tmux",
+      "Bash",
+      "Git",
+    ],
+    liveLink: "https://github.com/anshul333y/scripts",
+    repoLink: "https://github.com/anshul333y/.dots",
   },
 ];
